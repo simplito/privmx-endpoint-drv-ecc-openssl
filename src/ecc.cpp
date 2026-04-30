@@ -149,7 +149,7 @@ int privmxDrvEcc_pointOct2point(const char* oct, int octlen, privmxDrvEcc_Point*
         return 2;
     }
     bn_ctx_unique_ptr ctx = newBnCtx();
-    if (ctx = NULL) {
+    if (ctx == NULL) {
         return 3;
     }
     EC_POINT* raw_point = point.get();
